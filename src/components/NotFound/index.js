@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
-// import './style.css';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-class NotFound extends Component {
-  render() {
-    return (
-      <div>
-        <h1>404 : Not Found :(</h1>
-      </div>
-    )
-  }
+function NotFound() {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/login')
+  }, [])
+
+  return (
+    <div className="Register-header">
+     <b> P A G E - N O T F O U N D </b>
+    </div>
+  );
 }
 
 export default NotFound;

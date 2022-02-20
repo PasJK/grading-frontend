@@ -91,14 +91,14 @@ function Grading() {
     </div>
     <Container>
         <Row className="justify-content-md-center text-center">
-          <Col xs={5}>
+          <Col xs={12} md={5}>
             <h1 className='Grade-size'> 
               <Badge bg={gradeBadge[grade]}>{grade}</Badge>
             </h1>
           </Col>
         </Row>
         <Row className="justify-content-md-center">
-        <Col xs={5}>
+        <Col xs={12} md={5}>
           <Form>
             <Form.Group className="mb-3" controlId="score">
               <Form.Control type="number" placeholder="Input your score." onChange={(e) => setScore(e.target.value)} min="1" max="100" />
@@ -109,7 +109,7 @@ function Grading() {
         </Row>
 
         <Row className="justify-content-md-center text-center">
-          <Col xs={5}>
+        <Col xs={12} md={5}>
             <div className="d-grid gap-2">
               <Button variant="outline-primary" size="lg" onClick={sendScore}>
                 Send !
